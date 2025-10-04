@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB BOT YUKXZ SHIROGANE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      text-align: center;
+      padding: 20px;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d1117;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+    .btn {
+      background: #238636;
+      color: white;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn:hover {
+      background: #2ea043;
+    }
+    .card {
+      background: #161b22;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    h1, h2 {
+      color: #ffffff;
+    }
+    a.btn-link {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: #0969da;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    a.btn-link:hover {
+      background: #1f6feb;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #8b949e;
+    }
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      width: 80%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="overlay">
+    <h1>WEB BOT YUKXZ SHIROGANE</h1>
+    <button class="btn" onclick="document.getElementById('overlay').style.display='none'">MEMBUKA</button>
+  </div>  <h2>Menu Utama</h2>
+  <p>Pilih salah satu menu di bawah ini.</p>  <div class="card">
+    <h3>GRUB BOT</h3>
+    <p>Gabung ke grup WhatsApp untuk komunitas bot.</p>
+    <a class="btn-link" href="https://chat.whatsapp.com/JBoSbv9eC2n7xcWZDU2cgG?mode=ems_copy_t" target="_blank">Masuk Grup</a>
+  </div>  <div class="card">
+    <h3>SALURAN UPDATE BOT</h3>
+    <p>Dapatkan update terbaru seputar bot di saluran resmi.</p>
+    <a class="btn-link" href="https://whatsapp.com/channel/0029VbB8smTIXnlhSPbOMk2G" target="_blank">Buka Saluran</a>
+  </div>  <div class="card">
+    <h3>SEWA BOT</h3>
+    <p>Pilih opsi untuk sewa bot:</p>
+    <div>
+      <input type="text" id="grupLink" placeholder="Masukkan link grup WhatsApp">
+      <button class="btn" onclick="kirimLinkGrup()">Masukkan Link Grup</button>
+    </div>
+    <button class="btn" onclick="window.location.href='https://wa.me/6285142040816?text=Halo+saya+mau+dibuatkan+OWNER+bot+%E2%9C%85'">Dibuatkan OWNER</button>
+  </div>  <div class="footer">Power by YUKINA AND EDXZ</div>  <script>
+    function kirimLinkGrup() {
+      var link = document.getElementById('grupLink').value;
+      if(link.trim() !== "") {
+        window.location.href = 'https://wa.me/6285142040816?text=Halo+saya+mau+sewa+bot+untuk+grup:+ ' + encodeURIComponent(link);
+      } else {
+        alert("Masukkan link grup terlebih dahulu!");
+      }
+    }
+  </script></body>
+</html>
